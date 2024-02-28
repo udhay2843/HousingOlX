@@ -1,0 +1,27 @@
+.demo{
+  background-color: aqua;
+  font-weight: bolder;
+
+  color: black;
+}
+.hello{
+  background-color:transparent;
+  color: red;
+}
+.hello {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+.demo1{
+  color: red;
+  background-color:white;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.hello:hover {
+  animation-play-state: paused;
+}
