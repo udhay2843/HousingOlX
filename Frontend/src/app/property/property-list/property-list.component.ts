@@ -50,16 +50,16 @@ export class PropertyListComponent implements OnInit {
     return this.cities && this.cities.find(c => c.name.toLowerCase() === city.toLowerCase()) !== undefined;
 
   }
-  // onCityFilter() {
-  //   if (this.City) {
-  //     if (!this.isValidCity(this.City)) {
-  //       this.alertify.error('No City Found Please Try Again...');
-  //       return;
-  //     }
+  onCityFilter() {
+    if (this.City) {
+      if (!this.isValidCity(this.City)) {
+        this.alertify.error('No City Found Please Try Again...');
+        return;
+      }
 
-  //   this.SearchCity = this.City;
-  //   }
-  // }
+    this.SearchCity = this.City;
+    }
+  }
   onCityInputChange(city: string) {
     if (city && this.isValidCity(city)) {
       this.SearchCity = city;
